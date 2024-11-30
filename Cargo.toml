@@ -14,4 +14,6 @@ categories = ["authentication", "cryptography", "command-line-utilities"]
 exclude = [".*"]
 
 [dependencies]
-passgen-lib = { git = 'https://github.com/mammothcoding/passgen-lib' }
+passgen-lib = "*"
+clap = { version = "4.5.21", features = ["cargo"] }
+clap_derive = "*"
