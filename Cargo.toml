@@ -1,0 +1,16 @@
+[package]
+name = "passgen-cmd"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.83"
+license = "MIT"
+description = "Cross-platform tool for generating cryptographically secure passwords/tokens and other sets and sequences."
+readme = "README.md"
+authors = ["Mamontov Konstantin <k@mamont.xyz>"]
+homepage = "https://github.com/mammothcoding/passgen-cmd"
+repository = "https://github.com/mammothcoding/passgen-cmd"
+keywords = ["generator", "password", "token", "crypto-resistant", "console-tool"]
+categories = ["authentication", "cryptography", "command-line-utilities"]
+exclude = [".*"]
+
+[dependencies]
