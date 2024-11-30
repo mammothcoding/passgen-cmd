@@ -14,3 +14,4 @@ categories = ["authentication", "cryptography", "command-line-utilities"]
 exclude = [".*"]
 
 [dependencies]
+passgen-lib = { git = 'https://github.com/mammothcoding/passgen-lib' }
