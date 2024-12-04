@@ -1,36 +1,33 @@
+use clap::{arg, Parser};
+use clap_derive::Parser;
 use passgenlib::Passgen;
-use clap::{arg, command, value_parser, Arg, ColorChoice, Parser};
 
-/*#[derive(Parser, Debug)]
-#[command(version, about, long_about = None)]
+#[derive(Parser, Debug)]
+#[command(version, about)]
 struct Args {
-    /// Name of the person to greet
-    #[arg(short, long)]
-    name: String,
-
-    /// Number of times to greet
-    #[arg(short, long, default_value_t = 1)]
-    count: u8,
-}*/
+    /// Length of result.
+    #[arg(default_value_t = 8)]
+    length: u32,
+    /// User defined character set.
+    /// ⚠️ This set of characters will exclude all other rules.
+    #[arg(short, long, default_value = "")]
+    custom_charset: String,
+}
 
 fn main() {
+    let args = Args::parse();
 
-
-
-    let matches = command!()
-        .arg(
-            arg!([length])
-                .value_parser(value_parser!(u32))
-                .default_value("8"),
-        )
-        .color(ColorChoice::Always)
-        .get_matches();
-
-    let length: &u32 = matches
-        .get_one::<u32>("length")
-        .expect("length must be provided");
-
-    println!("{}", Passgen::default().generate(*length));
-
-
+    if args.custom_charset != "" {
+        println!(
+            "{}",
+            Passgen::default_strong_and_usab().generate(args.length)
+        );
+    } else {
+        println!(
+            "{}",
+            Passgen::new()
+                .set_custom_charset(args.custom_charset.leak())
+                .generate(args.length)
+        );
+    }
 }
