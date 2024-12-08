@@ -17,18 +17,41 @@ Readme на разных языках:
 
 Используются [CSPRNGs](https://rust-random.github.io/book/guide-rngs.html#cryptographically-secure-pseudo-random-number-generators-csprngs) Isaac64Rng и Hc128Rng.
 
-## Использование
-
-
-
-#### Создать стойкий токен, включающий все летералы, цифры и специальные символы длиной 30 символов:
-
-```rust
-let result = Passgen::default().generate(30);
+## Устновка
+```bash
+cargo install passgen-cmd
 ```
 
+## Использование
 
+#### Вывести помощь
+```bash
+passgen-cmd -h
+```
+### Examples
+#### Создать стойкий токен, включающий все летералы, цифры и специальные символы длиной 30 символов:
+```bash
+passgen-cmd 30
+```
+#### Создать стойкий и удобный пароль с длиной по умолчанию 8 символов:
+```bash
+passgen-cmd -S
+```
+#### Сгенерировать криптостойкую случайную строку из вашего набора символов длиной 12:
+```bash
+passgen-cmd 12 -c bla@.321
+```
+#### Сгенерировать токен на подобии токенов Telegram (1-ая часть: 10 цифр, 2-ая: 30 символов из набора всех летералов и цифр ) [unix-like]:
+```bash
+echo $(passgen-cmd 10 -n)":"$(passgen-cmd 35 -lLn)
+```
+#### Сгенерировать UUID (паттерн: 8-4-4-4-4-12 из шестнадцатеричного набора) [unix-like]:
+```bash
+echo $(passgen-cmd 8 -c 0123456789abcdef)"-"$(passgen-cmd 4 -c 0123456789abcdef)"-"$(passgen-cmd 4 -c 0123456789abcdef)"-"$(passgen-cmd 4 -c 0123456789abcdef)"-"$(passgen-cmd 12 -c 0123456789abcdef)
+```
+
+## Загрузки
+[Собранные релизы](https://github.com/mammothcoding/passgen-console-linuxwin/releases/)
 
 ## Лицензия
-
 [MIT](https://choosealicense.com/licenses/mit/)

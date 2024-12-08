@@ -15,19 +15,19 @@ struct Args {
 
     /// Include lowercase letters to the generator.
     #[arg(short = 'l', long, default_value = "false")]
-    pub letters_on: bool,
+    letters_on: bool,
 
     /// Include capital letters to the generator.
     #[arg(short = 'L', long, default_value = "false")]
-    pub u_letters_on: bool,
+    u_letters_on: bool,
 
     /// Include numeric characters to the generator.
     #[arg(short = 'n', long, default_value = "false")]
-    pub nums_on: bool,
+    nums_on: bool,
 
     /// Include special characters to the generator.
     #[arg(short = 's', long, default_value = "false")]
-    pub spec_symbs_on: bool,
+    spec_symbs_on: bool,
 
     /// Including all characters, but
     /// the first position in the password is a capital or small letter,
@@ -35,7 +35,7 @@ struct Args {
     /// ⚠️If this rule is enabled, the other consistency rules of the generating are not taken,
     /// except for a rule "custom_charset".
     #[arg(short = 'S', long, default_value = "false", verbatim_doc_comment)]
-    pub strong_usab_on: bool,
+    strong_usab_on: bool,
 
     /// User defined character set.
     /// ⚠️This set of characters will exclude all other rules except for a rule "strong_usab_on".

@@ -17,18 +17,41 @@ Cross-platform tool for generating cryptographically secure passwords/tokens and
 
 [CSPRNGs](https://rust-random.github.io/book/guide-rngs.html#cryptographically-secure-pseudo-random-number-generators-csprngs) Isaac64Rng and Hc128Rng are used.
 
-## Usage
-
-
-
-#### You can create a strong token including all leterals, numbers and special symbols with length 30 charasters:
-
-```rust
-let result = Passgen::default().generate(30);
+## Install
+```bash
+cargo install passgen-cmd
 ```
 
+## Usage
 
+#### Print help
+```bash
+passgen-cmd -h
+```
+### Examples
+#### You can create a strong token 30 characters long including all leterals, numbers and special symbols 30 characters long:
+```bash
+passgen-cmd 30
+```
+#### You can create a strong and usability password with default 8 characters long:
+```bash
+passgen-cmd -S
+```
+#### You can create a set from your custom charset 12 characters long:
+```bash
+passgen-cmd 12 -c bla@.321
+```
+#### You can create a token like Telegram tokens (first part: 10 numbers, second part: 30 characters from all leterals and numbers) [unix-like]:
+```bash
+echo $(passgen-cmd 10 -n)":"$(passgen-cmd 35 -lLn)
+```
+#### You can create a UUID (8-4-4-4-4-12 hexadecimal pattern) [unix-like]:
+```bash
+echo $(passgen-cmd 8 -c 0123456789abcdef)"-"$(passgen-cmd 4 -c 0123456789abcdef)"-"$(passgen-cmd 4 -c 0123456789abcdef)"-"$(passgen-cmd 4 -c 0123456789abcdef)"-"$(passgen-cmd 12 -c 0123456789abcdef)
+```
+
+## Downloads
+[Releases/Builded packages](https://github.com/mammothcoding/passgen-console-linuxwin/releases/)
 
 ## License
-
 [MIT](https://choosealicense.com/licenses/mit/)
