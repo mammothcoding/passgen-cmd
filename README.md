@@ -51,7 +51,7 @@ echo $(passgen-cmd 8 -c 0123456789abcdef)"-"$(passgen-cmd 4 -c 0123456789abcdef)
 ```
 
 ## Downloads
-[Releases/Builded packages](https://github.com/mammothcoding/passgen-console-linuxwin/releases/)
+[Releases/Builded packages](https://github.com/mammothcoding/passgen-cmd/releases/)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)

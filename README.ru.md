@@ -28,7 +28,7 @@ cargo install passgen-cmd
 ```bash
 passgen-cmd -h
 ```
-### Examples
+### Примеры
 #### Создать стойкий токен, включающий все летералы, цифры и специальные символы длиной 30 символов:
 ```bash
 passgen-cmd 30
@@ -51,7 +51,7 @@ echo $(passgen-cmd 8 -c 0123456789abcdef)"-"$(passgen-cmd 4 -c 0123456789abcdef)
 ```
 
 ## Загрузки
-[Собранные релизы](https://github.com/mammothcoding/passgen-console-linuxwin/releases/)
+[Собранные релизы](https://github.com/mammothcoding/passgen-cmd/releases/)
 
 ## Лицензия
 [MIT](https://choosealicense.com/licenses/mit/)
