@@ -28,7 +28,7 @@ cargo install passgen-cmd
 passgen-cmd -h
 ```
 ### Examples
-#### You can create a strong token 30 characters long including all leterals, numbers and special symbols 30 characters long:
+#### You can create a strong token 30 characters long including all leterals, numbers and special symbols:
 ```bash
 passgen-cmd 30
 ```
