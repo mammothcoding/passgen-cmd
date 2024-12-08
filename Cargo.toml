@@ -17,3 +17,14 @@ exclude = [".*"]
 passgen-lib = "1.0.3"
 clap = { version = "4.5.23", features = ["cargo"] }
 clap_derive = "4.5.18"
+
+# Reduce the size of the executable  file:
+[profile.release]
+lto = true
+codegen-units = 1
+opt-level = "z"
+panic = 'abort'
+strip = true
+
+[build-dependencies]
+windows_exe_info = "0.4.2"
