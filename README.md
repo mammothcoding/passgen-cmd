@@ -44,10 +44,6 @@ passgen-cmd 12 -c bla@.321
 ```bash
 echo $(passgen-cmd 10 -n)":"$(passgen-cmd 35 -lLn)
 ```
-#### You can create a UUID (8-4-4-4-4-12 hexadecimal pattern) [unix-like]:
-```bash
-echo $(passgen-cmd 8 -c 0123456789abcdef)"-"$(passgen-cmd 4 -c 0123456789abcdef)"-"$(passgen-cmd 4 -c 0123456789abcdef)"-"$(passgen-cmd 4 -c 0123456789abcdef)"-"$(passgen-cmd 12 -c 0123456789abcdef)
-```
 
 ## Downloads
 [Releases/Builded packages](https://github.com/mammothcoding/passgen-cmd/releases/)
