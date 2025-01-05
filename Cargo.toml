@@ -1,6 +1,6 @@
 [package]
 name = "passgen-cmd"
-version = "1.0.0"
+version = "1.1.0"
 edition = "2021"
 rust-version = "1.83"
 license = "MIT"
@@ -14,7 +14,7 @@ categories = ["authentication", "cryptography", "command-line-utilities"]
 exclude = [".*"]
 
 [dependencies]
-passgen-lib = "1.0.3"
+passgen-lib = "1.1"
 clap = { version = "4.5.23", features = ["cargo"] }
 clap_derive = "4.5.18"
 

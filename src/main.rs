@@ -38,6 +38,7 @@ struct Args {
     strong_usab_on: bool,
 
     /// User defined character set.
+    /// You can use any Unicode characters and emoji. For example: abcABC123⭕➖❎⚫⬛n₼⁂🙂
     /// ⚠️This set of characters will exclude all other rules except for a rule "strong_usab_on".
     /// ⚙️If "strong_usab_on" on too then you can generate combined strong and usability result with custom charset.
     #[arg(short, long, default_value = "", verbatim_doc_comment)]

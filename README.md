@@ -38,7 +38,7 @@ passgen-cmd -S
 ```
 #### You can create a set from your custom charset 12 characters long:
 ```bash
-passgen-cmd 12 -c bla@.321
+passgen-cmd 12 -c abcABC123⭕➖❎⚫⬛n₼⁂🙂
 ```
 #### You can create a token like Telegram tokens (first part: 10 numbers, second part: 30 characters from all leterals and numbers) [unix-like]:
 ```bash
