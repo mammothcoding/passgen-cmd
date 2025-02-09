@@ -16,6 +16,8 @@ Readme на разных языках:
 
 Используются [CSPRNGs](https://rust-random.github.io/book/guide-rngs.html#cryptographically-secure-pseudo-random-number-generators-csprngs) Isaac64Rng и Hc128Rng.
 
+![alt text](./passgen-cmd_demo.gif "passgen-cmd_demo.gif")
+
 ## Устновка
 ```bash
 cargo install passgen-cmd
@@ -50,3 +52,12 @@ echo $(passgen-cmd 10 -n)":"$(passgen-cmd 35 -lLn)
 
 ## Лицензия
 [MIT](https://choosealicense.com/licenses/mit/)
+
+### Другие проекты для генерации паролей
+[passgen-lib](https://github.com/mammothcoding/passgen-lib)
+
+[passgen-desktop](https://github.com/mammothcoding/passgen-desktop)
+
+[passgen-console-linuxwin](https://github.com/mammothcoding/passgen-console-linuxwin)
+
+[passgen-telegram](https://github.com/mammothcoding/passgen-telegram)
